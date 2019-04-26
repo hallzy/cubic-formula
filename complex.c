@@ -174,9 +174,9 @@ complex_t divc(complex_t c1, complex_t c2) {
   // Proof:
   //   let denominator z = (x + yi) : x,y ∈ ℝ and z ∈ ℂ
   //   By definition, the conjugate of z conj(z) = (x - yi)
-  //   z*conj(z) = (x + yi)(x - yi) = x^2 - yxi + xyi y^2*i^2
-  //                                = x^2 + y^2*(-1)
-  //                                = x^2 - y^2
+  //   z*conj(z) = (x + yi)(x - yi) = x^2 - yxi + xyi - y^2*i^2
+  //                                = x^2 - y^2*(-1)
+  //                                = x^2 + y^2
   float denominator = pow(c2.r, 2) + pow(c2.i, 2);
 
   // We now have a complex numerator divided by a real number
@@ -189,7 +189,7 @@ complex_t divc(complex_t c1, complex_t c2) {
   return ret;
 }
 
-// Raise a complex number to a exponent
+// Raise a complex number to an exponent
 complex_t powc(complex_t c, uint8_t e) {
   // Start with complex number equalling 1
   complex_t ret = create(1,0);
