@@ -12,7 +12,7 @@
 
 // Zero is the tolerance set for comparing floats. This is effectively 0 for
 // comparisons
-#define ZERO 0.0001
+#define ZERO 0.01
 
 // Cos is adjacent/hypotenuse. That equals -1 for -1/1 where our angle is π
 #define PI acos(-1.0)
@@ -101,6 +101,10 @@ void print_complex(complex_t c) {
 
 // Print out an array of complex numbers of size 'size'
 void print_complex_arr(complex_t *c, uint8_t size) {
+  if (c == NULL) {
+    return;
+  }
+
   for (uint8_t i = 0; i < size; i++) {
     print_complex_helper(c[i]);
     printf("\n");
@@ -218,6 +222,9 @@ complex_t* root(complex_t c, uint8_t e) {
   // Our root will have e solutions, so create an array of complex numbers of
   // that size
   complex_t* ret = malloc(e*sizeof(complex_t));
+  if (ret == NULL) {
+    return NULL;
+  }
 
   // Zero out the return
   for (uint8_t i = 0; i < e; i++) {
@@ -271,9 +278,15 @@ complex_t* quadraticFormula(float a, float b, float c) {
   // This gives us an array of both solutions, with automatically takes care of
   // the +/- in the equation
   complex_t *sqrtRes = sqrtc(insideSqrt);
+  if (sqrtRes == NULL) {
+    return NULL;
+  }
 
   // We will get 2 solutions, so create array of size 2
   complex_t* ret = malloc(2*sizeof(complex_t));
+  if (ret == NULL) {
+    return NULL;
+  }
 
   // Loop through the results of the square root to complete the formula
   for (uint8_t i = 0; i < 2; i++) {
@@ -304,6 +317,9 @@ complex_t* cubicFormula(float a, float b, float c, float d) {
   // Since there are 2 cuberoots, we will get 9 different complex numbers which
   // we will need to combine into an actual solution later
   complex_t* ret = malloc(9*sizeof(complex_t));
+  if (ret == NULL) {
+    return NULL;
+  }
 
   // Calculate q
   float q = (-pow(b, 3))/(27*pow(a, 3));
@@ -326,10 +342,19 @@ complex_t* cubicFormula(float a, float b, float c, float d) {
   // This gives us back 2 solutions, which handles the + sqrt and the - sqrt for
   // us
   complex_t* sqrtRes = sqrtc(add(qSquared_c, rCubed_c));
+  if (sqrtRes == NULL) {
+    return ret;
+  }
 
   // Calculate the result of each of the 2 cube roots
   complex_t* cbrt1 = cbrtc(add(q_c, sqrtRes[0]));
+  if (cbrt1 == NULL) {
+    return ret;
+  }
   complex_t* cbrt2 = cbrtc(add(q_c, sqrtRes[1]));
+  if (cbrt2 == NULL) {
+    return ret;
+  }
 
   // no longer need the square root results
   free(sqrtRes);
