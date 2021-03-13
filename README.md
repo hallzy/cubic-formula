@@ -10,11 +10,11 @@ a polynomial of degree 2 and 3 respectively.
 
 ### Quadratic
 
-![formula](https://latex.codecogs.com/gif.latex?\frac{-b&space;\pm&space;\sqrt{b^2&space;-&space;4ac}}{2a})
+![formula](pics/quadratic_formula.png)
 
 ### Cubic
 
-![formula](https://latex.codecogs.com/gif.latex?\sqrt[3]{\left(\frac{-b^3}{27a^3}&plus;\frac{bc}{6a^2}-\frac{d}{2a}\right)&plus;\sqrt{\left(\frac{-b^3}{27a^3}&plus;\frac{bc}{6a^2}-\frac{d}{2a}\right)^2&plus;\left(\frac{c}{3a}-\frac{b^2}{9a^2}\right)^3}}&plus;&space;\break&space;\sqrt[3]{\left(\frac{-b^3}{27a^3}&plus;\frac{bc}{6a^2}-\frac{d}{2a}\right)-\sqrt{\left(\frac{-b^3}{27a^3}&plus;\frac{bc}{6a^2}-\frac{d}{2a}\right)^2&plus;\left(\frac{c}{3a}-\frac{b^2}{9a^2}\right)^3}}&space;-&space;\frac{b}{3a})
+![formula](pics/cubic_formula.png)
 
 In order to use the cubic formula you often need to deal with complex numbers,
 even when solutions are 100% real.
@@ -30,26 +30,30 @@ The imaginary parts just cancel out for solutions that are real.
 
 The below equation (as with all quadratics) has 2 solutions:
 
-![equation](https://latex.codecogs.com/gif.latex?x^2&space;-8x&space;&plus;&space;16&space;=&space;0)
+![equation](pics/normal_quadratic_example.png)
 
-![answer](https://latex.codecogs.com/gif.latex?x&space;=&space;4,&space;-4)
+![answer](pics/normal_quadratic_example_answer.png)
 
 Some quadratics have complex solutions:
 
-![equation](https://latex.codecogs.com/gif.latex?x^2&space;&plus;&space;16&space;=&space;0)
+![equation](pics/complex_quadratic_example.png)
 
-![answer](https://latex.codecogs.com/gif.latex?x&space;=&space;4i,&space;-4i&space;:&space;i&space;=&space;\sqrt{-1})
+![answer](pics/complex_quadratic_example_answer.png)
 
 ### Cubic
 
 The below equation (as with all cubics) has 3 solutions:
 
-![equation](https://latex.codecogs.com/gif.latex?x^3&space;-&space;6x^2&space;&plus;&space;11x&space;-&space;6&space;=&space;0)
+![equation](pics/normal_cubic_example.png)
 
-![answer](https://latex.codecogs.com/gif.latex?x&space;=&space;1,&space;2,&space;3)
+![answer](pics/normal_cubic_example_answer.png)
 
 Some cubics have complex solutions:
 
-![equation](https://latex.codecogs.com/gif.latex?x^3&space;&plus;&space;x^2&space;&plus;&space;x&space;&plus;&space;1&space;=&space;0)
+![equation](pics/complex_cubic_example.png)
 
-![answer](https://latex.codecogs.com/gif.latex?x&space;=&space;i,&space;-i,&space;-1&space;:&space;i&space;=&space;\sqrt{-1})
+![answer](pics/complex_cubic_example_answer.png)
+
+## Credit
+
+[sciweavers.org](http://www.sciweavers.org/free-online-latex-equation-editor) to create the equation images above.
